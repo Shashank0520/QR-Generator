@@ -67,7 +67,7 @@ async def generate_qr_image(file: UploadFile = File(...)):
         # Upload to GoFile
         with open(temp_name, "rb") as f:
             files = {"file": (file.filename, f)}
-            response = requests.post("https://store1.gofile.io/uploadFile", files=files)
+            response = requests.post("https://api.gofile.io/uploadFile", files=files, timeout=20)
 
         os.remove(temp_name)
 
@@ -98,7 +98,7 @@ async def generate_qr_file(file: UploadFile = File(...)):
         # Upload to GoFile
         with open(temp_name, "rb") as f:
             files = {"file": (file.filename, f)}
-            response = requests.post("https://store1.gofile.io/uploadFile", files=files)
+            response = requests.post("https://api.gofile.io/uploadFile", files=files, timeout=20)
 
         os.remove(temp_name)
 
