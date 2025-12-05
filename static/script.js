@@ -12,8 +12,7 @@ const API_BASE =
   window.location.hostname === "127.0.0.1" ||
   window.location.hostname === "localhost"
     ? "http://127.0.0.1:8000"
-    : "https://qr-generator-bniq.onrender.com";
-
+    : "https://generate-qr-k5n0.onrender.com";
 
 // Show/hide input sections based on dropdown
 optionSelect.addEventListener("change", () => {
